@@ -4,11 +4,11 @@ const express = require('express')
 const app = express()
 
 const webpack = require('webpack')
+const webpackConfig = require('./webpack.config')
 const webpackDevMiddleware = require('webpack-dev-middleware')
 const webpackHotMiddleware = require('webpack-hot-middleware')
 
-const config = require('./webpack.config')
-const compiler = webpack(config)
+const compiler = webpack(webpackConfig)
 const compilerOptions = {
   publicPath: config.output.publicPath
 }
