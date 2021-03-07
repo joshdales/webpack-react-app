@@ -22,8 +22,7 @@ let devtool = false
  */
 let plugins = [
   new HtmlWebpackPlugin({
-    mobile: true,
-    appMountId: 'app'
+    template: 'src/index.ejs'
   }),
 ]
 
@@ -72,7 +71,7 @@ module.exports = {
         }
       },
       {
-        exclude: [/(^|\.(svg|js|jsx|ts|tsx|html))$/],
+        exclude: [/(^|\.(svg|js|jsx|ts|tsx|html|ejs))$/],
         type: 'asset/resource',
       }
     ]

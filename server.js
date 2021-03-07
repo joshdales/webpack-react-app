@@ -16,9 +16,5 @@ const compilerOptions = {
 app.use(webpackDevMiddleware(compiler, compilerOptions))
 app.use(webpackHotMiddleware(compiler))
 
-app.get('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'index.html'))
-})
-
 const PORT = 3000
 app.listen(PORT, () => { console.log(`listening on port ${PORT}`) })
