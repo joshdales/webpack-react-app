@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src",
-    "server": "node server.js"
+    "server": "NODE_ENV=development node server.js"
   },
   "keywords": [],
   "author": "",
