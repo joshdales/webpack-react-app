@@ -5,15 +5,12 @@ const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin'
 module.exports = {
   mode: "development",
   devtool: 'eval-cheap-module-source-map',
-  devServer: {
-    contentBase: './dist',
-  },
   entry: [
     './src/index.tsx',
     'webpack-hot-middleware/client'
   ],
   output: {
-    filename: 'bundle.main.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: "/"
   },

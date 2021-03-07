@@ -10,7 +10,7 @@ const webpackHotMiddleware = require('webpack-hot-middleware')
 
 const compiler = webpack(webpackConfig)
 const compilerOptions = {
-  publicPath: config.output.publicPath
+  publicPath: webpackConfig.output.publicPath
 }
 
 app.use(webpackDevMiddleware(compiler, compilerOptions))
