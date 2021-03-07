@@ -21,9 +21,7 @@ let devtool = false
  * The webpack plugins that we are going to be using
  */
 let plugins = [
-  new HtmlWebpackPlugin({
-    template: 'src/index.ejs'
-  }),
+  new HtmlWebpackPlugin()
 ]
 
 if (inDevMode) {
@@ -44,7 +42,7 @@ module.exports = {
   devtool,
   entry,
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: "/"
   },
@@ -54,7 +52,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(j|t)sx?$/,
+        test: /\.(j|t)sx?$/i,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -76,5 +74,16 @@ module.exports = {
       }
     ]
   },
-  plugins
+  plugins,
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\//]/,
+          name: 'vendor',
+          chunks: 'all'
+        }
+      }
+    }
+  }
 }
