@@ -5,6 +5,7 @@ const app = express()
 
 const webpack = require('webpack')
 const webpackDevMiddleware = require('webpack-dev-middleware')
+const webpackHotMiddleware = require('webpack-hot-middleware')
 
 const config = require('./webpack.config')
 const compiler = webpack(config)
@@ -13,6 +14,7 @@ const compilerOptions = {
 }
 
 app.use(webpackDevMiddleware(compiler, compilerOptions))
+app.use(webpackHotMiddleware(compiler))
 
 app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'index.html'))

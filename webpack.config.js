@@ -1,4 +1,6 @@
 const path = require('path')
+const webpack = require('webpack')
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 
 module.exports = {
   mode: "development",
@@ -6,7 +8,10 @@ module.exports = {
   devServer: {
     contentBase: './dist',
   },
-  entry: './src/index.tsx',
+  entry: [
+    './src/index.tsx',
+    'webpack-hot-middleware/client'
+  ],
   output: {
     filename: 'bundle.main.js',
     path: path.resolve(__dirname, 'dist'),
@@ -23,6 +28,9 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
+            plugins: [
+              'react-refresh/babel'
+            ],
             presets: [
               "@babel/preset-env",
               "@babel/preset-typescript",
@@ -32,5 +40,13 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new ReactRefreshWebpackPlugin({
+      overlay: {
+        sockIntegration: 'whm'
+      }
+    })
+  ]
 }
