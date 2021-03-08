@@ -69,8 +69,12 @@ module.exports = {
         }
       },
       {
-        exclude: [/(^|\.(svg|js|jsx|ts|tsx|html|ejs))$/],
-        type: 'asset/resource',
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource'
+      },
+      {
+        exclude: /(^|\.(js|jsx|ts|tsx|html|ejs))$/,
+        type: 'asset/resource'
       }
     ]
   },
