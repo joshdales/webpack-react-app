@@ -6,6 +6,11 @@ module.exports = {
       "jsx": true
     }
   },
+  settings: {
+    react: {
+      version: 'detect'
+    }
+  },
   plugins: [
     '@typescript-eslint',
     'react',
@@ -18,4 +23,8 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'prettier'
   ],
+  rules: {
+    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off'
+  }
 }

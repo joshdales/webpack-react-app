@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
 const inDevMode = process.env.NODE_ENV === 'development'
 
@@ -21,7 +22,12 @@ let devtool = false
  * The webpack plugins that we are going to be using
  */
 let plugins = [
-  new HtmlWebpackPlugin()
+  new HtmlWebpackPlugin(),
+  new ForkTsCheckerWebpackPlugin({
+    eslint: {
+        files: './src/**/*.{ts,tsx,js,jsx}'
+      }
+  })
 ]
 
 if (inDevMode) {
