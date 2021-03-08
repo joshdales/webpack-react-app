@@ -1,5 +1,5 @@
 {
-  "name": "react-base",
+  "name": "react-app-base",
   "version": "1.0.0",
   "description": "A base for a react app",
   "main": "index.tsx",
