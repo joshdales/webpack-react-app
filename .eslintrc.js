@@ -24,7 +24,10 @@ module.exports = {
     'prettier'
   ],
   rules: {
+    // Typescript Rules
     '@typescript-eslint/no-unused-vars': 'off',
-    '@typescript-eslint/explicit-function-return-type': 'off'
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    // React Rules
+    'react/no-unescaped-entities': 'off'
   }
 }
