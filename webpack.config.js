@@ -69,11 +69,15 @@ module.exports = {
         }
       },
       {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader']
+      },
+      {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource'
       },
       {
-        exclude: /(^|\.(js|jsx|ts|tsx|html|ejs))$/,
+        exclude: /(^|\.(js|jsx|ts|tsx|html|ejs|css))$/,
         type: 'asset/resource'
       }
     ]
