@@ -1,0 +1,46 @@
+* {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+
+main,
+footer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2.5rem;
+}
+
+p {
+  margin: 0.75rem 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
