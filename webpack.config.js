@@ -44,7 +44,8 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: "/"
+    publicPath: "/",
+    clean: true
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx']
@@ -74,10 +75,6 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource'
-      },
-      {
-        exclude: /(^|\.(js|jsx|ts|tsx|html|ejs|css))$/,
         type: 'asset/resource'
       }
     ]
