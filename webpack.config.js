@@ -25,8 +25,8 @@ let plugins = [
   new HtmlWebpackPlugin(),
   new ForkTsCheckerWebpackPlugin({
     eslint: {
-        files: './src/**/*.{ts,tsx,js,jsx}'
-      }
+      files: './src/**/*.{ts,tsx,js,jsx}'
+    }
   })
 ]
 
