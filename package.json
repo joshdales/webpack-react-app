@@ -7,7 +7,7 @@
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src",
     "server": "NODE_ENV=development node server.js",
     "build": "webpack",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "author": "Josh Dales",
   "license": "MIT",
