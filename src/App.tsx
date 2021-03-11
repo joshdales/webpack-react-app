@@ -21,8 +21,8 @@ function App(): JSX.Element {
       <footer>
         <p>
           Made with the{' '}
-          <a href="https://github.com/joshdales/react-app-base">
-            react-app-base
+          <a href="https://github.com/joshdales/webpack-react-app">
+            webpack-react-app
           </a>{' '}
           template
         </p>
