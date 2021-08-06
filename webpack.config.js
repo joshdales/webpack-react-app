@@ -7,14 +7,14 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 const inDevMode = process.env.NODE_ENV === 'development'
 
 /**
- * Our entry points to our code
+ * The entry points to our code
  */
 let entry = [
   './src/index.tsx'
 ]
 
 /**
- * The sourcemap (or lack there of that we are going to be using)
+ * The sourcemap (or lack there of) that we are going to be using
  */
 let devtool = false
 
