@@ -5,9 +5,9 @@ just a setup for quickly developing in react with Typescript that can deploy to 
 
 Currently set up with the following:
 
-- `react` 17.0.1
-- `webpack` 5.24.4
-- `typescript` 4.2.3
-- `eslint` 7.21.0
+- `react` 17
+- `webpack` 5
+- `typescript` 4
+- `eslint` 7
 
 And a few other supporting packages
